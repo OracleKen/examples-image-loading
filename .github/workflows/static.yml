@@ -6,8 +6,7 @@ on:
   push:
     branches: ["main"]
     paths:
-    - 'Web/**/**.*'
-    - 'Web2/**/**.*'
+      - 'Web/**/**.*'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -37,11 +36,12 @@ jobs:
           lfs: true
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Upload artifact 1
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './'
+          path: './Web'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
