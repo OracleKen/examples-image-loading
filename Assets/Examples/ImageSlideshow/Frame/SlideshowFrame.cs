@@ -9,7 +9,7 @@ using VRC.Udon.Common.Interfaces;
 [UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class SlideshowFrame : UdonSharpBehaviour
 {
-    [SerializeField, Tooltip("URLs of images to load")]
+    [SerializeField, Tooltip("URLs of images to load.")]
     private VRCUrl[] imageUrls;
     
     [SerializeField, Tooltip("URL of text file containing captions for images, one caption per line.")]
